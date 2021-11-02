@@ -4,6 +4,8 @@
 
 - dataset
   - chABSAデータセット
+    - scoreをpositiveなら+1negativeなら-1として最終的なscoreが正の数だとpositive負の数だとnegativeとする
+    - scoreが0の時は使わない
 
 ## 「観点で分類を行う」
 
