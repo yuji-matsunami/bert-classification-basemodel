@@ -5,7 +5,7 @@ import os
 import json
 from sklearn.model_selection import train_test_split
 
-class Dataloader:
+class DataReader:
     def __init__(self, dir_name) -> None:
         self.files_list = self.get_jsonfiles(dir_name)
         self.df_jsons = self.make_dataflame(dir_name,self.files_list)
@@ -110,6 +110,13 @@ class Dataloader:
         return train_df, test_df
 
 def test_binary_dataset(dataframe:DataFrame):
+    """[summary]
+    - Check the data frame you have created
+
+
+    Args:
+        dataframe (DataFrame): [description] created DataFrame
+    """
     cnt = 0
     for row in dataframe.itertuples():
         print(row)
@@ -121,7 +128,7 @@ def test_binary_dataset(dataframe:DataFrame):
 
 
 def main():
-    dataset = Dataloader(dir_name="../../chABSA-dataset")
+    dataset = DataReader(dir_name="../../chABSA-dataset")
     train_df, test_df = dataset.binary_classfication_dataset()
     test_binary_dataset(train_df)
     test_binary_dataset(test_df)

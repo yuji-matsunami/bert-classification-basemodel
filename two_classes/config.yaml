@@ -1,0 +1,2 @@
+data_dir: "../../chABSA-dataset"
+epoch: 20
