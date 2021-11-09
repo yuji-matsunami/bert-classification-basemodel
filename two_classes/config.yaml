@@ -1,2 +1,3 @@
 data_dir: "../../chABSA-dataset"
 epoch: 20
+trial_size: 100
